@@ -1,0 +1,185 @@
+.about {
+  padding: clamp(40px, 8vw, 80px) clamp(15px, 5vw, 20px);
+  background: linear-gradient(to bottom, #ffffff, #f9f5ff);
+  min-height: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(30px, 5vw, 60px);
+  align-items: center;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(124, 58, 237, 0.15);
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 3 / 4;
+  background: linear-gradient(135deg, #e8d4f8 0%, #d8c4e8 100%);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(124, 58, 237, 0.15);
+  animation: slideRight 0.8s ease-out;
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.content {
+  animation: slideLeft 0.8s ease-out;
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.title {
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 800;
+  color: #6d28d9;
+  margin: 0 0 clamp(20px, 3vw, 30px) 0;
+}
+
+.intro h3 {
+  font-size: clamp(18px, 3.5vw, 24px);
+  font-weight: 700;
+  color: #7c3aed;
+  margin: 0 0 15px 0;
+}
+
+.qualifications {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.qualifications li {
+  font-size: clamp(14px, 2.5vw, 16px);
+  color: #4b5563;
+  margin-bottom: 12px;
+  padding-right: 25px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.qualifications li:before {
+  content: "✓";
+  position: absolute;
+  right: 0;
+  color: #8b5cf6;
+  font-weight: bold;
+}
+
+.belief {
+  font-size: clamp(14px, 2.5vw, 18px);
+  color: #5b6b82;
+  line-height: 1.8;
+  padding: clamp(15px, 3vw, 20px);
+  background: rgba(139, 92, 246, 0.08);
+  border-right: 4px solid #8b5cf6;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+
+.belief strong {
+  color: #7c3aed;
+}
+
+.philosophy h3 {
+  font-size: clamp(16px, 3vw, 22px);
+  font-weight: 700;
+  color: #7c3aed;
+  margin: 30px 0 15px 0;
+}
+
+.philosophy p {
+  font-size: clamp(14px, 2.5vw, 16px);
+  color: #5b6b82;
+  line-height: 1.8;
+  margin: 15px 0;
+  text-align: justify;
+}
+
+/* Mobile: 320px - 480px */
+@media (max-width: 480px) {
+  .about {
+    padding: 30px 15px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .imagePlaceholder {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Tablet: 481px - 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+  .about {
+    padding: 50px 20px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .imagePlaceholder {
+    max-width: 250px;
+  }
+}
+
+/* iPad: 769px - 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    gap: 40px;
+  }
+
+  .imagePlaceholder {
+    max-width: 280px;
+  }
+}
+
+/* Desktop: 1025px and above */
+@media (min-width: 1025px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  .imagePlaceholder {
+    max-width: 300px;
+  }
+}

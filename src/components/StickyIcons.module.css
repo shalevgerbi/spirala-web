@@ -1,0 +1,123 @@
+.stickyContainer {
+  position: fixed;
+  left: clamp(10px, 3vw, 20px);
+  bottom: clamp(15px, 3vw, 30px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 2vw, 15px);
+  z-index: 999;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.3s ease;
+}
+
+.stickyContainer.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.icon {
+  width: clamp(44px, 10vw, 56px);
+  height: clamp(44px, 10vw, 56px);
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+  transition: all 0.3s ease;
+  font-size: clamp(20px, 5vw, 28px);
+  min-width: 44px;
+  min-height: 44px;
+  touch-action: manipulation;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
+}
+
+.icon:active {
+  transform: scale(0.95);
+}
+
+.icon svg {
+  width: clamp(20px, 4vw, 28px);
+  height: clamp(20px, 4vw, 28px);
+}
+
+/* Mobile: 320px - 480px */
+@media (max-width: 480px) {
+  .stickyContainer {
+    left: 10px;
+    bottom: 15px;
+    gap: 10px;
+  }
+
+  .icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Tablet: 481px - 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+  .stickyContainer {
+    left: 12px;
+    bottom: 20px;
+  }
+
+  .icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .icon svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* iPad: 769px - 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .stickyContainer {
+    left: 15px;
+    bottom: 25px;
+  }
+
+  .icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .icon svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+/* Desktop: 1025px and above */
+@media (min-width: 1025px) {
+  .stickyContainer {
+    left: 20px;
+    bottom: 30px;
+  }
+
+  .icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .icon svg {
+    width: 28px;
+    height: 28px;
+  }
+}

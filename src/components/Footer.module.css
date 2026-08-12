@@ -1,0 +1,133 @@
+.footer {
+  background: linear-gradient(135deg, #6d28d9 0%, #7c3aed 100%);
+  color: white;
+  padding: clamp(40px, 8vw, 60px) clamp(15px, 5vw, 20px) clamp(20px, 4vw, 30px);
+  margin-top: clamp(40px, 8vw, 60px);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: clamp(30px, 5vw, 40px);
+  margin-bottom: clamp(30px, 5vw, 40px);
+}
+
+.section h3 {
+  font-size: clamp(20px, 4vw, 28px);
+  font-weight: 800;
+  margin: 0 0 15px 0;
+}
+
+.section h4 {
+  font-size: clamp(14px, 3vw, 18px);
+  font-weight: 700;
+  margin: 0 0 15px 0;
+}
+
+.section p {
+  font-size: clamp(13px, 2.5vw, 16px);
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section ul li {
+  margin-bottom: 12px;
+}
+
+.section a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: clamp(13px, 2.5vw, 16px);
+}
+
+.section a:hover {
+  color: #e8d4f8;
+}
+
+.email {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  margin-bottom: clamp(20px, 3vw, 30px);
+}
+
+.bottom {
+  text-align: center;
+  font-size: clamp(12px, 2.3vw, 14px);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Mobile: 320px - 480px */
+@media (max-width: 480px) {
+  .footer {
+    padding: 30px 15px 20px;
+    margin-top: 40px;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .section h3 {
+    font-size: 20px;
+  }
+
+  .section h4 {
+    font-size: 14px;
+  }
+}
+
+/* Tablet: 481px - 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+  .footer {
+    padding: 40px 20px 25px;
+  }
+
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+/* iPad: 769px - 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .footer {
+    padding: 50px 20px 30px;
+  }
+
+  .content {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+  }
+}
+
+/* Desktop: 1025px and above */
+@media (min-width: 1025px) {
+  .footer {
+    padding: 60px 20px 30px;
+  }
+
+  .content {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+  }
+}
