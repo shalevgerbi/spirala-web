@@ -1,0 +1,126 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 64px;
+  padding: 8px 20px;
+  /* background: rgba(160, 112, 182, 0.26); */
+  border-bottom: 1px solid rgba(134, 77, 133, 0.14);
+  box-shadow: 0 4px 18px rgba(82, 41, 80, 0.08);
+  backdrop-filter: blur(15px);
+}
+
+.logoLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuButton {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid rgba(112, 48, 111, 0.2);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+}
+
+.menuButton span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 2px;
+  background: #70306f;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.menuButton[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menuButton[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.menuButton[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.links {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 170px;
+  padding: 8px;
+  border: 1px solid rgba(112, 48, 111, 0.14);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 8px 24px rgba(82, 41, 80, 0.16);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+}
+
+.linksOpen {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.links a {
+  display: block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: #70306f;
+  font-size: 15px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.links a:hover,
+.links a:focus-visible {
+  background: rgba(124, 58, 237, 0.08);
+  color: #7c3aed;
+}
+
+.logo {
+  display: block;
+  width: 150px;
+  height: auto;
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    min-height: 56px;
+    padding: 6px 16px;
+  }
+
+  .menuButton {
+    right: 16px;
+  }
+
+  .logo {
+    width: 122px;
+  }
+
+  .links a {
+    font-size: 12px;
+  }
+}

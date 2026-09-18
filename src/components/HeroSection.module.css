@@ -1,8 +1,8 @@
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;
-  min-height: 500px;
+  height: auto;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,12 +11,24 @@
 
 .background {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #e8d4f8 0%, #d8c4e8 50%, #c8b4d8 100%);
+  inset: 0;
+  background-image: url('/background-image-sapir.PNG');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background: linear-gradient(135deg, #e8d4f8 0%, #d8c4e8 50%, #c8b4d8 100%); */
   z-index: 0;
+}
+
+.background::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  left: 0;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  filter: blur(2px);
 }
 
 .content {
@@ -43,6 +55,17 @@
 .logo {
   margin-bottom: clamp(15px, 3vw, 30px);
   animation: slideDown 0.8s ease-out;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  
+}
+
+.logoImage {
+  display: block;
+  width: 600px;
+  height: auto;
+  /* margin-left: 48px; */
 }
 
 .logoText {
@@ -113,20 +136,48 @@
 /* Mobile: 320px - 480px */
 @media (max-width: 480px) {
   .hero {
-    min-height: 500px;
-    height: 80vh;
+    min-height: 100svh;
+    height: 100svh;
+    padding: 32px 0 48px;
+    flex-shrink: 0;
   }
 
   .content {
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    padding: 24px 18px;
+  }
+
+  .logo {
+    margin-bottom: 22px;
+  }
+
+  .logoImage {
+    width: min(360px, 88vw);
+  }
+
+  .subtitle {
+    margin: 8px auto 30px;
+    font-size: 17px;
+    line-height: 1.5;
+  }
+
+  .cta {
+    width: min(100%, 320px);
+    min-height: 52px;
+    padding: 14px 20px;
+    font-size: 16px;
+    border-radius: 16px;
   }
 }
 
 /* Tablet: 481px - 768px */
 @media (min-width: 481px) and (max-width: 768px) {
   .hero {
-    min-height: 550px;
-    height: 85vh;
+    min-height: 100svh;
+    height: auto;
   }
 
   .content {
@@ -137,8 +188,8 @@
 /* iPad: 769px - 1024px */
 @media (min-width: 769px) and (max-width: 1024px) {
   .hero {
-    min-height: 600px;
-    height: 90vh;
+    min-height: 100svh;
+    height: auto;
   }
 
   .content {
@@ -149,8 +200,8 @@
 /* Desktop: 1025px and above */
 @media (min-width: 1025px) {
   .hero {
-    height: 100vh;
-    min-height: 600px;
+    height: auto;
+    min-height: 100svh;
   }
 
   .content {

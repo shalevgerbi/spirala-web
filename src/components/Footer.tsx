@@ -6,7 +6,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} id="contact">
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.section}>
@@ -23,7 +23,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:hello@spirala.com">דוא״ל</a>
+                <a href="mailto:contact@sapirgerbi.com">דוא״ל</a>
               </li>
               <li>
                 <a href="https://wa.me/+972522215609" target="_blank" rel="noopener noreferrer">
@@ -35,10 +35,22 @@ export default function Footer() {
 
           <div className={styles.section}>
             <h4>יצירת קשר</h4>
-            <p>נשמחנו לשמוע ממך!</p>
-            <a href="mailto:contact@spirala.com" className={styles.email}>
-              contact@spirala.com
+            <p>נשמח לשמוע ממך!</p>
+            <a href="mailto:contact@sapirgerbi.com" className={styles.email}>
+              contact@sapirgerbi.com
             </a>
+          </div>
+
+          <div className={styles.section}>
+            <h4>מידע משפטי</h4>
+            <ul>
+              <li>
+                <a href="/site-terms">תקנון האתר</a>
+              </li>
+              <li>
+                <a href="/accessibility">הצהרת נגישות</a>
+              </li>
+            </ul>
           </div>
         </div>
 

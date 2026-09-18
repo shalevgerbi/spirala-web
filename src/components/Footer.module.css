@@ -2,7 +2,7 @@
   background: linear-gradient(135deg, #6d28d9 0%, #7c3aed 100%);
   color: white;
   padding: clamp(40px, 8vw, 60px) clamp(15px, 5vw, 20px) clamp(20px, 4vw, 30px);
-  margin-top: clamp(40px, 8vw, 60px);
+  /* margin-top: clamp(40px, 8vw, 60px); */
 }
 
 .container {
@@ -79,7 +79,7 @@
 @media (max-width: 480px) {
   .footer {
     padding: 30px 15px 20px;
-    margin-top: 40px;
+    /* margin-top: 40px; */
   }
 
   .content {

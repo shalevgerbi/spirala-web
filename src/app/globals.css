@@ -91,6 +91,52 @@ img {
   display: block;
 }
 
+html.accessibility-largeText {
+  font-size: 18px;
+}
+
+html.accessibility-readableFont body,
+html.accessibility-readableFont button,
+html.accessibility-readableFont input,
+html.accessibility-readableFont textarea {
+  font-family: Arial, sans-serif !important;
+}
+
+html.accessibility-highContrast body {
+  background: #ffffff;
+  color: #000000;
+}
+
+html.accessibility-highContrast a,
+html.accessibility-highContrast button {
+  color: #000000 !important;
+  outline-color: #000000;
+}
+
+html.accessibility-grayscale {
+  filter: grayscale(1);
+}
+
+html.accessibility-pauseAnimations *,
+html.accessibility-pauseAnimations *::before,
+html.accessibility-pauseAnimations *::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+
+html.accessibility-highlightLinks a {
+  background: #fff200 !important;
+  color: #000000 !important;
+  outline: 2px solid #000000;
+  text-decoration: underline;
+}
+
+html.accessibility-keyboardNavigation :focus-visible {
+  outline: 4px solid #005fcc !important;
+  outline-offset: 4px;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
