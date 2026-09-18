@@ -21,7 +21,7 @@ export default function HeroSection() {
       
       <div className={styles.content}>
         <div className={styles.logo}>
-            <Image className={styles.logoImage} src="/spirala-logo.png" alt="ספירלה" width={600} height={200} />
+            <Image className={styles.logoImage} src="/spirala-logo.PNG" alt="ספירלה" width={600} height={200} />
         </div>
 
         <p className={styles.subtitle}>
